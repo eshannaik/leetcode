@@ -6,10 +6,8 @@ int* twoSum(int* nums, int numsSize, int target, int* returnSize){
     *returnSize =2;
     for (int i=0;i<numsSize;i++)
     {
-        for(int j=i;j<numsSize;j++)
+        for(int j=(i+1);j<numsSize;j++)
         {
-            if (i!=j)
-            {
                 sum = nums[i] + nums[j];
                 if (sum == target)
                 {
@@ -17,7 +15,6 @@ int* twoSum(int* nums, int numsSize, int target, int* returnSize){
                     r[1]=i;
                     return r;
                 }
-            }
             sum=0;
         }
     }
