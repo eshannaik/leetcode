@@ -9,7 +9,6 @@ int largestAltitude(int* gain, int gainSize){
     for (int i=0;i<(gainSize-1);i++)
     {
         temp[i+2] = temp[i+1]+gain[i+1];
-        printf("%d = %d + %d\n",temp[i+2],temp[i],gain[i+1]);
     }
     for(int i=0;i<(gainSize+1);i++)
     {
