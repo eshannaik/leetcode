@@ -1,5 +1,23 @@
 // https://leetcode.com/problems/median-of-two-sorted-arrays/submissions/
 
+//cpp
+
+vector <int> a;
+        float m;
+        for(int i=0;i<nums1.size();i++)
+            a.push_back(nums1[i]);
+        for(int j=0;j<nums2.size();j++)
+            a.push_back(nums2[j]);
+        
+        sort(a.begin(),a.end());
+        
+        if(a.size()%2!=0)
+            m = (a[a.size()/2]);
+        else 
+            m = (((a[(a.size()-1)/2])+(a[(a.size())/2]))/2.0);
+        return m;
+
+//c
 double findMedianSortedArrays(int* nums1, int nums1Size, int* nums2, int nums2Size){
     float a = 0.0;
     int i=0,j=0,k=0;
