@@ -15,19 +15,15 @@ public:
         }
         while(s[i] >= '0' && s[i] <= '9')
         {
+            n = n*10+(s[i]-48);
             if(n > INT_MAX && sign != 1)
                 return INT_MAX;
             if(n > INT_MAX && sign == 1) 
                 return INT_MIN;
-            n = n*10+(s[i]-48);
             i++;
         }
         if(sign==1)
             n=n*-1;
-        if(n < INT_MIN) 
-                return INT_MIN;
-        if(n > INT_MAX)
-                return INT_MAX;
         return n;
     }
-};
+};   
