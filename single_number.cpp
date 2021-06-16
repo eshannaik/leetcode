@@ -11,3 +11,11 @@ sort(nums.begin(),nums.end());
         if(nums.size()%2!=0)
             return nums[nums.size()-1];
         return 0;
+
+// https://leetcode.com/problems/missing-number/submissions/
+
+int n=nums.size();
+int total_sum = (n*(n+1))/2;
+int sum = accumulate(nums.begin(), nums.end(), 0);
+        
+return total_sum-sum;
