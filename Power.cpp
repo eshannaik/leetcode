@@ -43,3 +43,20 @@ public:
         return (n>0 && 1073741824%n==0);
     }
 };
+
+// https://leetcode.com/problems/power-of-three/submissions/
+
+class Solution {
+public:
+    bool isPowerOfThree(int n) {
+        // if (n==0)
+        //     return 0;
+        // while(n!=0 && n%3==0){
+        //         n=n/3;
+        // }
+        // if(n==1)
+        //     return 1;
+        // return 0;
+        return (n>0 && 1162261467%n==0);
+    }
+};
