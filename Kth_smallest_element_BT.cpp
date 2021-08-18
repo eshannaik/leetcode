@@ -10,7 +10,6 @@ public:
         queue <TreeNode*> res;
         res.push(root);
         vector <int> v;
-        vector<double> result;
         int l;
         while(!res.empty()){
             l = res.size();
