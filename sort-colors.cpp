@@ -17,3 +17,16 @@ public:
         }
     }
 };
+
+class Solution {
+public:
+    void sortColors(vector<int>& nums) {
+        vector <int> v;
+        
+        for(auto x:nums)
+            v.insert(lower_bound(v.begin(),v.end(),x),x);
+        
+        for(int i=0;i<v.size();i++)
+            nums[i]=v[i];
+    }
+};
