@@ -15,3 +15,21 @@ public:
         return helper (head,NULL);
     }
 };
+
+class Solution {
+public:
+    ListNode* reverseList(ListNode* head) {
+        ListNode* n=NULL,*p=NULL;
+        ListNode* curr=head;
+        
+        while(curr!=NULL)
+        {
+            n = curr->next;
+            curr->next = p;
+            
+            p = curr;
+            curr = n;
+        }
+        return p;
+    }
+};
